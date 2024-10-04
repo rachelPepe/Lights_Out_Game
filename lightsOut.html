@@ -7,15 +7,15 @@
         <style>
             .grid3x3 {
                 display: grid;
-                grid-template-columns: 32px 32px 32px;
-                grid-template-rows: 32px 32px 32px;
+                grid-template-columns: 100px 100px 100px;
+                grid-template-rows: 100px 100px 100px;
                 grid-gap: 2px;
                 margin-bottom: 16px;
             }
             .grid5x5 {
                 display: grid;
-                grid-template-columns: 32px 32px 32px 32px 32px;
-                grid-template-rows: 32px 32px 32px 32px 32px;
+                grid-template-columns: 100px 100px 100px 100px 100px;
+                grid-template-rows: 100px 100px 100px 100px 100px;
                 grid-gap: 2px;
                 margin-bottom: 16px;
             }
@@ -37,25 +37,29 @@
                 font-family: monospace;
             }
             body {
-                background-color:rgb(182, 211, 236)
+                background-color:rgb(182, 211, 236);
             }
-            @media only screen and (max-width: 768px) {
+            @media only screen and (min-width: 390px) {
                 body {
-                    width: 100%;
+                    width: 100vw;
                 }
             }
-    
+
+            
+     
         </style>
         <script src = "lightsOut.js"></script>
     </head>
     <body>
         <!-- contains buttons representing game's lights -->
-        <div id="gameGrid"></div>
-        <div id="information"></div>
-        <!-- >starts new 3x3 g -->
-        <input id="newGame3x3Button" type="button" value = "New Game (3x3)">
-        <!-- starts new 5x5 game -->
-        <input id="newGame5x5Button" type="button" value="New Game (5x5)">
+         <div id="#game-container">
+            <div id="gameGrid"></div>
+            <div id="information"></div>
+            <!-- >starts new 3x3 g -->
+            <input id="newGame3x3Button" type="button" value = "New Game (3x3)">
+            <!-- starts new 5x5 game -->
+            <input id="newGame5x5Button" type="button" value="New Game (5x5)">
+        </div>
 
         <div id="rules">
             <p>The goal of the game is to turn off all the lights by clicking on the squares. 
